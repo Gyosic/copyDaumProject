@@ -43,7 +43,7 @@ function Shopping() {
       <ul className="shopping_items">
         {shoppingItems.map((el, idx) => (
           <li key={idx}>
-            <img src={el.picture} />
+            <img src={el.picture} alt="" />
             <div>{el.item}</div>
           </li>
         ))}

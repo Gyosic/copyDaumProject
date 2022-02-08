@@ -18,7 +18,7 @@ function News() {
         <ul className="with_thumb">
           {news.map((el, idx) => (
             <li key={idx} className="thumb">
-              <img src={el.thumb} width="154" height="94" />
+              <img src={el.thumb} width="154" height="94" alt="" />
               <div className="title">{el.title}</div>
             </li>
           ))}

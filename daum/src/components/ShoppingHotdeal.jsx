@@ -15,7 +15,7 @@ function ShoppingHotdeal() {
       <ul className="hotdeal_list">
         {hotdealList.map((el, idx) => (
           <li key={idx}>
-            <img src={el.thumb} />
+            <img src={el.thumb} alt="" />
             <div>{el.item}</div>
           </li>
         ))}
