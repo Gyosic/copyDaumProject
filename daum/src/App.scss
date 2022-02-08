@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  height: 200vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 990px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+}
