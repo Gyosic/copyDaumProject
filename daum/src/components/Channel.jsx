@@ -31,7 +31,7 @@ function Channel() {
             </li>
           ) : (
             <li key={idx}>
-              <img src={el.thumb} width="152" height="94" />
+              <img src={el.thumb} width="152" height="94" alt="" />
               <div className="item">{el.item}</div>
               <div className="origin">{el.origin}</div>
             </li>
@@ -45,7 +45,7 @@ function Channel() {
             idx === 0 ? (
               <li key={idx}>
                 <div className="best_first">
-                  <img src={el.thumb} width="152" height="108" />
+                  <img src={el.thumb} width="152" height="108" alt="" />
                   <div>{el.title}</div>
                   <div className="rank">
                     <span>1</span>
@@ -55,7 +55,7 @@ function Channel() {
             ) : idx === 1 ? (
               <li key={idx}>
                 <div className="best_second">
-                  <img src={el.thumb} width="152" height="108" />
+                  <img src={el.thumb} width="152" height="108" alt="" />
                   <div>{el.title}</div>
                   <div className="rank">
                     <span>2</span>

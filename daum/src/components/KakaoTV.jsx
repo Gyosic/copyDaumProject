@@ -13,7 +13,7 @@ function KakaoTV() {
       <ul className="kakaotv_list">
         {tv.map((el, idx) => (
           <li key={idx}>
-            <img src={el.thumb} width="154" />
+            <img src={el.thumb} width="154" alt="" />
             <div>{el.desc}</div>
           </li>
         ))}
