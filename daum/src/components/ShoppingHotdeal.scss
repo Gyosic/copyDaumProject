@@ -1,0 +1,87 @@
+.hotdeal_container {
+  width: calc(100%-2px);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ececec;
+  margin-top: 20px;
+
+  .hotdeal_header {
+    background-color: #fbfbfb;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 14px 0 14px;
+    border-bottom: 1px solid #ececec;
+
+    strong {
+      font-size: 16px;
+    }
+
+    .page_btn_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      font-size: 13px;
+
+      .left_btn {
+        width: 20px;
+        height: 20px;
+        background: url(../assest/icons/left_btn.png);
+        background-size: contain;
+        margin-left: 4px;
+        border: 1px solid #ececec;
+      }
+      .right_btn {
+        width: 20px;
+        height: 20px;
+        background: url(../assest/icons/right_btn.png);
+        background-size: contain;
+        border: 1px solid #ececec;
+        border-left: none;
+      }
+    }
+  }
+
+  .hotdeal_list {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+
+      img {
+        width: 108px;
+        height: 58px;
+        margin: 0 10px 8px 0;
+        border: 1px solid #ececec;
+      }
+    }
+  }
+
+  .recom {
+    display: flex;
+    font-size: 12px;
+    padding: 0 0 15px 15px;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88px;
+      height: 32px;
+      border: 1px solid #ececec;
+      border-left: none;
+
+      &:nth-child(1) {
+        border-left: 1px solid #ececec;
+      }
+    }
+  }
+}
