@@ -1,0 +1,165 @@
+.channel_container {
+  width: 100%;
+  height: 567px;
+
+  .channel_header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+
+  .channer_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    img {
+      border: 1px solid lightgrey;
+    }
+
+    li {
+      .first_list {
+        width: 321px;
+        height: 159px;
+        background: url("https://img1.daumcdn.net/thumb/S642x318a.q80/?fname=https://t1.daumcdn.net/news/202202/07/psychiatricnews/20220207150601738i0eb.jpeg")
+          no-repeat 0 100%;
+        background-size: contain;
+        position: relative;
+
+        .first_list_desc {
+          position: absolute;
+          bottom: 0px;
+          color: white;
+          padding: 10px;
+
+          div:first-child {
+            font-size: 12px;
+            padding: 5px;
+          }
+          div:nth-child(2) {
+            font-size: 14px;
+            padding: 0 5px;
+          }
+        }
+      }
+
+      .item {
+        width: 144px;
+        font-size: 13px;
+        padding: 0 10px 8px 0;
+      }
+
+      .origin {
+        width: 154px;
+        font-size: 12px;
+        color: #888;
+      }
+    }
+  }
+
+  .best {
+    width: 625px;
+    height: 127px;
+    background-color: #fbfbfc;
+    border: 1px solid lightgrey;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 13px;
+
+    .best_list {
+      display: flex;
+
+      .best_first {
+        height: 108px;
+        background: url("https://img1.daumcdn.net/thumb/S308x188a.q80/?fname=https://t1.daumcdn.net/news/202202/03/babshim/20220203102256257kysb.png");
+        background-size: cover;
+        position: relative;
+        margin: 10px 12px 0 0;
+
+        div {
+          position: absolute;
+          bottom: 0;
+          color: white;
+          padding: 10px;
+        }
+
+        .rank {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0.1px;
+          height: 0.1px;
+          background-color: grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+        }
+      }
+
+      .best_second {
+        height: 108px;
+        background: url("https://img1.daumcdn.net/thumb/S308x188a.q80/?fname=https://t1.daumcdn.net/news/202202/03/dailylife/20220203065306680gebe.jpeg");
+        background-size: cover;
+        position: relative;
+        margin: 10px 12px 0 0;
+
+        div {
+          position: absolute;
+          bottom: 0;
+          color: white;
+          padding: 10px;
+        }
+
+        .rank {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0.1px;
+          height: 0.1px;
+          background-color: grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+        }
+      }
+
+      .best_rest {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        .best_rest_list {
+          display: flex;
+          margin-bottom: 7px;
+
+          .rank {
+            width: 15px;
+            height: 15px;
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-right: 5px;
+            border-radius: 3px;
+          }
+
+          span {
+            display: inline-block;
+            width: 270px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
