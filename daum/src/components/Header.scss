@@ -1,0 +1,187 @@
+.header_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .header_upper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+
+    .header_upper_left {
+      display: flex;
+
+      .header_title {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          font-size: 11px;
+          color: grey;
+        }
+        .img_thumb {
+          margin-left: -45px;
+          cursor: pointer;
+        }
+      }
+
+      .searchbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .searchbar {
+          display: flex;
+          align-items: center;
+          position: relative;
+          width: 422px;
+          height: 44px;
+          border: 0.1px solid blue;
+          padding-left: 14px;
+          padding-right: 80px;
+
+          input {
+            width: 100%;
+            height: 26px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+          }
+
+          .keyboard_icon {
+            position: absolute;
+            right: 70px;
+            color: blue;
+            font-size: 16px;
+            cursor: pointer;
+          }
+
+          .search_icon {
+            position: absolute;
+            font-size: 24px;
+            right: 20px;
+            color: blue;
+            cursor: pointer;
+          }
+        }
+
+        ul {
+          list-style: none;
+          padding: 10px 0 0 0;
+          margin: 0;
+
+          a {
+            padding: 0 14px 0 0;
+          }
+        }
+
+        .favorsch {
+          width: 518px;
+          position: relative;
+
+          a {
+            font-size: 12px;
+          }
+
+          .left_icon {
+            position: absolute;
+            right: 13px;
+            margin-top: 1px;
+            font-size: 18px;
+            color: grey;
+            cursor: pointer;
+          }
+
+          .right_icon {
+            position: absolute;
+            right: 0;
+            margin-top: 1px;
+            font-size: 18px;
+            color: grey;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .daumtop_chanel_img {
+      margin-top: 10px;
+    }
+  }
+
+  .header_lower_box {
+    display: flex;
+    align-items: center;
+    justify-self: space-between;
+    width: 100%;
+    height: 45px;
+
+    .category {
+      display: flex;
+      align-items: center;
+      min-width: 680px;
+      height: 100%;
+      z-index: 10;
+
+      a {
+        margin-right: 19px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .down_icon {
+        font-size: 12px;
+        cursor: pointer;
+        position: relative;
+        right: 16px;
+      }
+    }
+
+    .date_desc {
+      display: flex;
+      align-items: center;
+      margin-left: 120px;
+      min-width: 200px;
+      height: 100%;
+
+      strong {
+        font-size: 13px;
+        margin-right: 10px;
+      }
+
+      .weather {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          font-size: 14px;
+          font-weight: 550;
+          margin-right: 5px;
+        }
+        .weather_icon {
+          position: relative;
+          top: -1px;
+          margin-right: 5px;
+        }
+        .weather_down_icon {
+          position: relative;
+          top: -1px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .category_line {
+    position: absolute;
+    top: 150px;
+    width: 100vw;
+    height: 45px;
+    border-top: 0.1px solid lightgrey;
+    border-bottom: 1px solid;
+  }
+}
