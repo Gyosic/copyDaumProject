@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaRegKeyboard } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import {
@@ -7,9 +8,44 @@ import {
 } from "react-icons/ai";
 import { TiWeatherSunny } from "react-icons/ti";
 import { favorSch, services } from "../assest/dummy";
+import Keyboard from "react-simple-keyboard";
+import layout from "simple-keyboard-layouts/build/layouts/korean";
+import "react-simple-keyboard/build/css/index.css";
 import "./Header.scss";
 
 function Header() {
+  const [keyboardClick, setKeyboardClick] = useState(false);
+  const [layoutName, setLayoutName] = useState("default");
+  const [inputVal, setInputVal] = useState("");
+
+  const onChange = (input) => {
+    console.log("Input changed", input);
+    setInputVal(input);
+  };
+
+  const inputHandler = (e) => {
+    setInputVal(e.target.value);
+  };
+
+  const onKeyPress = (button) => {
+    console.log("Button pressed", button);
+    if (button === "{shift}") {
+      layoutName === "default"
+        ? setLayoutName("shift")
+        : setLayoutName("default");
+    }
+    if (button === "{cshift}") {
+      layoutName === "change"
+        ? setLayoutName("cshift")
+        : setLayoutName("change");
+    }
+    if (button === "{change}") {
+      layoutName === "default"
+        ? setLayoutName("change")
+        : setLayoutName("default");
+    }
+  };
+
   return (
     <div className="header_wrapper">
       <div className="header_upper">
@@ -28,8 +64,63 @@ function Header() {
           </h1>
           <div className="searchbox">
             <div className="searchbar">
-              <input type="text"></input>
-              <FaRegKeyboard className="keyboard_icon" />
+              <input
+                type="text"
+                value={inputVal}
+                onChange={inputHandler}
+              ></input>
+              <FaRegKeyboard
+                className="keyboard_icon"
+                onClick={() => setKeyboardClick(!keyboardClick)}
+              />
+              {keyboardClick ? (
+                <div className="simple_keyboard">
+                  <Keyboard
+                    display={{
+                      "{bksp}": "←",
+                      "{space}": "간격",
+                      "{shift}": "↑",
+                      "{cshift}": "↑",
+                      "{enter}": "검색",
+                      "{change}": "영문",
+                    }}
+                    layoutName={layoutName}
+                    layoutCandidates={layout.layoutCandidates}
+                    layout={{
+                      default: [
+                        "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
+                        "ㅂ ㅈ ㄷ ㄱ ㅅ ㅛ ㅕ ㅑ ㅐ ㅔ [ ] \\",
+                        "ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ ; '",
+                        "{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ , . / {shift}",
+                        "{change} {space} {enter}",
+                      ],
+                      shift: [
+                        "~ ! @ # $ % ^ &amp; * ( ) _ + {bksp}",
+                        "ㅃ ㅉ ㄸ ㄲ ㅆ ㅛ ㅕ ㅑ ㅒ ㅖ { } |",
+                        'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ : "',
+                        "{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ &lt; &gt; ? {shift}",
+                        "{change} {space} {enter}",
+                      ],
+                      change: [
+                        "` 1 2 3 4 5 6 7 8 9 0 - = {bksp}",
+                        "q w e r t y u i o p [ ] \\",
+                        "a s d f g h j k l ; '",
+                        "{cshift} z x c v b n m , . / {shift}",
+                        "{change} {space} {enter}",
+                      ],
+                      cshift: [
+                        "~ ! @ # $ % ^ & * ( ) _ + {bksp}",
+                        "Q W E R T Y U I O P { } |",
+                        'A S D F G H J K L : "',
+                        "{cshift} Z X C V B N M < > ? {shift}",
+                        "{change} {space} {enter}",
+                      ],
+                    }}
+                    onChange={onChange}
+                    onKeyPress={onKeyPress}
+                  />
+                </div>
+              ) : null}
               <IoIosSearch className="search_icon" />
             </div>
             <ul className="favorsch">

@@ -10,15 +10,21 @@ ul {
   list-style: none;
 }
 .wrapper {
-  height: 200vh;
+  height: fit-content;
   width: 100vw;
+  min-width: 1080px;
   display: flex;
   justify-content: center;
+  position: relative;
+}
 
-  .container {
-    width: 990px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-  }
+.today_photo_container_bg {
+  position: absolute;
+  top: 1977px;
+  left: 0;
+  min-width: 100%;
+  height: 610px;
+  background-color: #fbfbfc;
+  border-top: 1px solid #ececec;
+  z-index: -10;
 }

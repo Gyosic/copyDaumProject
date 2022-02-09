@@ -6,14 +6,17 @@ import "./App.scss";
 
 function App() {
   return (
-    <div className="wrapper">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/*" element={<NoMatch />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <div className="wrapper">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/*" element={<NoMatch />} />
+          </Routes>
+        </BrowserRouter>
+        <div className="today_photo_container_bg" />
+      </div>
+    </>
   );
 }
 
